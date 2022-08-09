@@ -29,7 +29,7 @@
   list-style-type: none;
   width: 550px;
 }
-.list :first-child  {
+.list :first-child {
   font-weight: bold;
   color: black;
 }
@@ -44,8 +44,8 @@
   cursor: pointer;
 }
 
-.list-item:hover{
-  background-color:  rgba(219, 215, 215, 0.419);
+.list-item:hover {
+  background-color: rgba(219, 215, 215, 0.419);
 }
 
 .nav-button {
@@ -59,25 +59,23 @@
   transition: all 0.5s ease;
 }
 
-.nav-button:hover{
-  background:transparent ;
+.nav-button:hover {
+  background: transparent;
   border: solid 2.5px #5955b3;
   color: #5955b3;
   font-weight: bold;
-} 
-
-.button-group > .nav-button{
-  width: 135px;
 }
 
-
+.button-group > .nav-button {
+  width: 135px;
+}
 
 .banner-container {
   height: 570px;
   display: flex;
   align-items: center;
 }
-.banner-container   {
+.banner-container {
   width: 45%;
 }
 .banner-container > div > h1 {
@@ -85,7 +83,7 @@
   color: #35275a;
 }
 
-.banner-container > div > h1 >span {
+.banner-container > div > h1 > span {
   font-size: 62px;
   color: #5c58b3;
 }
@@ -98,16 +96,94 @@
   width: 180px;
 }
 
-.right-container{
-  
+.right-container {
 }
 
 img[alt="illustration"] {
   position: fixed;
-right: 0;
-height: 570px;
-top: 140px;
+  right: 0;
+  height: 570px;
+  top: 140px;
 }
 .banner-container > div > img {
   object-fit: cover;
+}
+
+.cart {
+  display: none;
+}
+
+/* media query */
+
+@media (max-width: 800px) {
+  .container {
+    margin: 50px 30px 0 30px;
+  }
+  .grow-list,
+  .nav-button {
+    display: none;
+  }
+  .navbar-container > div:nth-child(1) > img {
+    cursor: pointer;
+    height: 2rem;
+  }
+  .cart {
+    display: block;
+    width: 25px;
+  }
+  .banner-container > div > h1 {
+    font-size: 40px;
+    color: #35275a;
+  }
+  img[alt="illustration"] {
+    position: fixed;
+    right: 0;
+    height: 370px;
+    top: 135px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    margin: 25px 30px 0 30px;
+  }
+  .navbar-container > div:nth-child(1) > img {
+    cursor: pointer;
+    height: 25px;
+  }
+  .cart {
+    display: block;
+    width: 25px;
+  }
+
+  .banner-container {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .banner-container > div > h1 {
+    font-size: 36px;
+    color: #35275a;
+    width: 60%;
+  }
+  .banner-container > div > h1 > span {
+    font-size: 45px;
+    color: #5c58b3;
+  }
+
+  img[alt="illustration"] {
+    position: fixed;
+    right: 0;
+    height: 19%;
+    top: 223px;
+    object-fit: cover;
+    width: 55%;
+    z-index: -1;
+  }
+
+  .banner-container > div > p {
+    margin: 60px 0 25px 0;
+    color: #818181;
+    text-align: center;
+  }
 }
