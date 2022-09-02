@@ -32,7 +32,7 @@
             </ul>
           </div>
           <div class="button-group">
-            <img  class ="cart" src="./assets/cart.svg" alt="cart">
+            <div class="hamburger-menu"></div>
             <button class="nav-button">Contact Us</button>
           </div>
         </nav>
@@ -59,4 +59,11 @@
       </section>
     </div>
   </body>
+  <script>
+    const buttoncontainer = document.querySelector(".button-group");
+    const burgermenu = document.querySelector(".hamburger-menu");
+    buttoncontainer.addEventListener("click", (e) => {
+      burgermenu.classList.toggle("cross-menu");
+    });
+  </script>
 </html>
